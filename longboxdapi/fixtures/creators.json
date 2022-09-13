@@ -1,0 +1,47 @@
+[
+    {
+        "model": "longboxdapi.creator",
+        "pk": 1,
+        "fields": {
+            "name": "Stan Lee",
+            "bio": "Lee created comic dynamos like Spider-Man, The Incredible Hulk, Black Panther, and the X-Men.",
+            "image": "https://www.indiewire.com/wp-content/uploads/2022/05/Stan-Lee.jpg?resize=800,640"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 2,
+        "fields": {
+            "name": "Steve Ditko",
+            "bio": "Stephen J. Ditko was an American comics artist and writer best known for being co-creator of Marvel superhero Spider-Man and creator of Doctor Strange.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/2/28/Steve_Ditko.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 3,
+        "fields": {
+            "name": "Jack Kirby",
+            "bio": "Jack Kirby was an American comic book artist, writer and editor, widely regarded as one of the medium's major innovators and one of its most prolific and influential creators.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Jack-Kirby_art-of-jack-kirby_wyman-skaar.jpg/800px-Jack-Kirby_art-of-jack-kirby_wyman-skaar.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 4,
+        "fields": {
+            "name": "Tom King",
+            "bio": "Tom King is an American author, comic book writer, and ex-CIA officer. He is best known for writing the novel A Once Crowded Sky, The Vision for Marvel Comics, The Sheriff of Babylon for the DC Comics imprint Vertigo, and Batman and Mister Miracle for DC Comics.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/2.15.19TomKingByLuigiNovi1.jpg/1024px-2.15.19TomKingByLuigiNovi1.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 5,
+        "fields": {
+            "name": "Gabriel Walta",
+            "bio": "Artist. Eisner Award winning comic-book artist, painter & illustrator.",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk-wmABfNsqx67CuRdm8lZKM9Typil1dOfqw&usqp=CAU"
+        }
+    }
+]

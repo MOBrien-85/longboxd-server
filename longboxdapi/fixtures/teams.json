@@ -1,0 +1,32 @@
+[
+    {
+        "model": "longboxdapi.team",
+        "pk": 1,
+        "fields": {
+            "name": "Avengers",
+            "description": "The Avengers are a team of superheroes appearing in American comic books published by Marvel Comics. The team made its debut in The Avengers #1, created by writer-editor Stan Lee and artist/co-plotter Jack Kirby.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/2/2b/Avengers_%28Marvel_Comics%29_vol_3_num_38.jpg",
+            "creators": [1, 3]
+        }
+    },
+    {
+        "model": "longboxdapi.team",
+        "pk": 2,
+        "fields": {
+            "name": "Fantastic Four",
+            "description": "The Fantastic Four is a superhero team appearing in American comic books published by Marvel Comics. The team debuted in The Fantastic Four #1, helping usher in a new level of realism in the medium.0,",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/a/ae/Fantastic_Four_Vol_1_525_Textless.jpg/revision/latest/scale-to-width-down/500?cb=20051218180802",
+            "creators": [1, 2]
+        }
+    },
+    {
+        "model": "longboxdapi.team",
+        "pk": 3,
+        "fields": {
+            "name": "X-Men",
+            "description": "The X-Men are a superhero team appearing in American comic books published by Marvel Comics, first appearing in The X-Men #1 by artist/co-plotter Jack Kirby and writer/editor Stan Lee in 1963.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/X-Men_%28Vol._6%29_No._2_Mahmud_Asrar_Variant_%28Textless%29.jpg/220px-X-Men_%28Vol._6%29_No._2_Mahmud_Asrar_Variant_%28Textless%29.jpg",
+            "creators": [1, 3]
+        }
+    }
+]

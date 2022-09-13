@@ -1,0 +1,10 @@
+[
+    {
+    "model": "longboxdapi.collector",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "bio": "Me"
+    }
+}
+]

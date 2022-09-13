@@ -1,0 +1,13 @@
+[
+    {
+        "model": "longboxdapi.review",
+        "pk": 1,
+        "fields": {
+            "review": "What an incredible collection of issues by King and Walta. Truly one of my favorite stories I've ever read.",
+            "rating": 5,
+            "favorite": true,
+            "issue": 2,
+            "user": 1
+        }
+    }
+]

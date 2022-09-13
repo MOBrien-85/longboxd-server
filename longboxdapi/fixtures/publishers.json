@@ -1,0 +1,12 @@
+[
+    {
+        "model": "longboxdapi.publisher",
+        "pk": 1,
+        "fields": {
+            "name": "Marvel",
+            "founded": "1939",
+            "description": "Marvel Comics is an American comic book publisher and primary imprint of Marvel Worldwide Inc., part of Marvel Entertainment.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Marvel-Comics-Logo.svg/411px-Marvel-Comics-Logo.svg.png?20160701183233"
+        }
+    }
+]

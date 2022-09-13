@@ -1,0 +1,14 @@
+[
+    {
+        "model": "longboxdapi.character",
+        "pk": 1,
+        "fields": {
+            "name": "Spider-Man",
+            "alias": "Peter Parker",
+            "desc": "Bitten by a radioactive spider, Peter Parker's arachnid abilities give him amazing powers he uses to help others, while is personal life continues to offer plenty of obstacles.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
+            "creators": [1, 2],
+            "teams": [1, 2, 3]
+        }
+    }
+]

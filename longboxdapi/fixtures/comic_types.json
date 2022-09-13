@@ -1,0 +1,23 @@
+[
+    {
+        "model": "longboxdapi.comictype",
+        "pk": 1,
+        "fields": {
+            "label": "Issue"
+        }
+    },
+    {
+        "model": "longboxdapi.comictype",
+        "pk": 2,
+        "fields": {
+            "label": "Trade Paperback"
+        }
+    },
+    {
+        "model": "longboxdapi.comictype",
+        "pk": 3,
+        "fields": {
+            "label": "Graphic Novel"
+        }
+    }
+]
