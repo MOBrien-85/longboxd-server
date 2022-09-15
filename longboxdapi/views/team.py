@@ -48,3 +48,4 @@ class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         fields = ('id', 'name', 'description', 'image', 'creators')
+        depth = 1

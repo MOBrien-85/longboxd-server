@@ -9,8 +9,9 @@ from longboxdapi.models import Collector
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
+
 def login_user(request):
-    '''Handles the authentication of a gamer
+    '''Handles the authentication of a collector
 
     Method arguments:
       request -- The full HTTP request object
@@ -38,7 +39,7 @@ def login_user(request):
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_user(request):
-    '''Handles the creation of a new gamer for authentication
+    '''Handles the creation of a new collector for authentication
 
     Method arguments:
       request -- The full HTTP request object
@@ -54,7 +55,7 @@ def register_user(request):
     )
 
     # Now save the extra info in the levelupapi_gamer table
-    gamer = Collector.objects.create(
+    collector = Collector.objects.create(
         bio=request.data['bio'],
         user=new_user
     )

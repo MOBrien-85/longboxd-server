@@ -38,7 +38,7 @@ router.register(r'creators', CreatorView, 'creator')
 router.register(r'characters', CharacterView, 'character')
 router.register(r'publishers', PublisherView, 'publisher')
 router.register(r'teams', TeamView, 'teams')
-router.register(r'userreviews', ReviewView, 'review')
+router.register(r'reviews', ReviewView, 'review')
 
 urlpatterns = [
     path('register', register_user),

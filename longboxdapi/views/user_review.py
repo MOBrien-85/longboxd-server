@@ -16,6 +16,8 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from longboxdapi.models import Review
+from longboxdapi.models.collector import Collector
+from longboxdapi.models import Comic
 
 
 class ReviewView(ViewSet):
@@ -43,9 +45,49 @@ class ReviewView(ViewSet):
         reviews = Review.objects.all()
         # add filter here
 
-        serializer = TeamSerializer(reviews, many=True)
+        serializer = ReviewSerializer(reviews, many=True)
         return Response(serializer.data)
 
+    def create(self, request):
+        """Handle POST operations for a review
+        
+        Returns
+            Response -- JSON serialized review instance
+        """
+        collector = Collector.objects.get(user=request.auth.user)
+        comic = Comic.objects.get(pk=request.data["issue"])
+
+        review = Review.objects.create(
+            review=request.data["review"],
+            rating=request.data["rating"],
+            favorite=request.data["favorite"],
+            issue=comic,
+            user=collector
+        )
+        serializer = ReviewSerializer(review)
+        return Response(serializer.data)
+
+    def update(self, request, pk):
+        """Handle PUT requests for a review
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        review = Review.objects.get(pk=pk)
+        review.review = request.data["review"]
+        review.rating = request.data["rating"]
+        review.favorite = request.data["favorite"]
+
+        comic = Comic.objects.get(pk=request.data["issue"])
+        review.issue = comic
+        review.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    def destroy(self, request, pk):
+        review = Review.objects.get(pk=pk)
+        review.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class ReviewSerializer(serializers.ModelSerializer):
     """JSON serializer for reviews"""

@@ -10,7 +10,7 @@ class Review(models.Model):
     comic book issue or 
     trade paperback """
 
-    review = models.CharField(max_length=100)
+    review = models.CharField(max_length=500)
     rating = models.IntegerField()
     favorite = models.BooleanField()
     issue = models.ForeignKey(Comic, on_delete=models.CASCADE)

@@ -7,6 +7,7 @@ from rest_framework.decorators import action
 from longboxdapi.models import Comic
 from longboxdapi.models import Collector
 
+
 class ComicView(ViewSet):
     """Longboxd comics view"""
 
@@ -84,3 +85,4 @@ class ComicSerializer(serializers.ModelSerializer):
         model = Comic
         fields = ('id', 'title', 'publisher', 'comic_type', 'series', 'characters', 'issue_number',
                   'sale_date', 'synopsis', 'cover_image', 'credits', 'teams')
+        depth = 1

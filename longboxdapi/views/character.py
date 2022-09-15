@@ -20,8 +20,8 @@ class CharacterView(ViewSet):
         """
         try:
             character = Character.objects.get(pk=pk)
-            serializers = CharacterSerializer(character)
-            return Response(serilizer.data)
+            serializer = CharacterSerializer(character)
+            return Response(serializer.data)
         except Character.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
@@ -42,4 +42,5 @@ class CharacterSerializer(serializers.ModelSerializer):
     """JSON serializer for characters"""
     class Meta:
         model = Character
-        fields = ('id', 'name', 'desc', 'image', 'creators', 'team')
+        fields = ('id', 'name', 'desc', 'image', 'creators', 'teams')
+        depth = 2
