@@ -12,6 +12,5 @@ class Review(models.Model):
 
     review = models.CharField(max_length=500)
     rating = models.IntegerField()
-    favorite = models.BooleanField()
-    issue = models.ForeignKey(Comic, on_delete=models.CASCADE)
-    user = models.ForeignKey(Collector, on_delete=models.CASCADE)
+    issue = models.ForeignKey(Comic, on_delete=models.CASCADE, related_name="reviews")
+    user = models.ForeignKey(Collector, on_delete=models.CASCADE, related_name="reviews")

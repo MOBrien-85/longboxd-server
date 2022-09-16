@@ -94,9 +94,13 @@ class ReviewView(ViewSet):
     def get_review_for_comic(self, request):
         try:
             collector = Collector.objects.get(user=request.auth.user)
-            review = Review.objects.get(issue=request.data["comic"], user=collector)
-            serializer = ReviewSerializer(review)
-            return Response(serializer.data)
+            review = Review.objects.filter(issue=request.data["comic"], user=collector)
+            if len(review) > 0:
+                data = {"status": True, "reviewId": review[0].id}
+                return Response(data)
+            else: 
+                data = {"status": False}
+                return Response(data)
         except Review.DoesNotExist:
             return Response({})
         
@@ -108,4 +112,4 @@ class ReviewSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Review
-        fields = ('id', 'review', 'rating', 'favorite', 'issue', 'user')
+        fields = ('id', 'review', 'rating', 'issue', 'user')

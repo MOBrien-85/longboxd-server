@@ -7,6 +7,8 @@ from longboxdapi.models import Collector
 from django.contrib.auth.models import User
 from rest_framework.decorators import action
 
+from longboxdapi.views.user_review import ReviewSerializer
+
 
 class CollectorView(ViewSet):
     """longboxd collector/user view for profiles"""
@@ -37,14 +39,17 @@ class CollectorView(ViewSet):
         user.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-class CollectorSerializer(serializers.ModelSerializer):
-    """JSON serializer for collectors
-    """
-    class Meta: 
-        model = Collector
-        fields = ('id', 'user', 'bio')
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'first_name', 'last_name', 'email', 'is_active')
+
+class CollectorSerializer(serializers.ModelSerializer):
+    """JSON serializer for collectors
+    """
+    reviews = ReviewSerializer(many=True)
+    user = UserSerializer()
+    class Meta: 
+        model = Collector
+        fields = ('id', 'user', 'bio', "reviews")
+
