@@ -22,3 +22,11 @@ class Comic(models.Model):
     cover_image = models.URLField()
     credits = models.ManyToManyField(Creator, through="ComicCreator", related_name="comic_creator")
     teams = models.ManyToManyField(Team, through="ComicTeam", related_name="team_in_comic")
+
+    @property
+    def inCollection(self):
+        return self.__inCollection
+
+    @inCollection.setter
+    def inCollection(self, value):
+        self.__inCollection = value

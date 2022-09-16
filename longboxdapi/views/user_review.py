@@ -18,6 +18,7 @@ from rest_framework import serializers, status
 from longboxdapi.models import Review
 from longboxdapi.models.collector import Collector
 from longboxdapi.models import Comic
+from rest_framework.decorators import action
 
 
 class ReviewView(ViewSet):
@@ -58,9 +59,9 @@ class ReviewView(ViewSet):
         comic = Comic.objects.get(pk=request.data["issue"])
 
         review = Review.objects.create(
-            review=request.data["review"],
+            review=request.data["description"],
             rating=request.data["rating"],
-            favorite=request.data["favorite"],
+            # favorite=request.data["favorite"],
             issue=comic,
             user=collector
         )
@@ -74,9 +75,9 @@ class ReviewView(ViewSet):
             Response -- Empty body with 204 status code
         """
         review = Review.objects.get(pk=pk)
-        review.review = request.data["review"]
+        review.review = request.data["description"]
         review.rating = request.data["rating"]
-        review.favorite = request.data["favorite"]
+        # review.favorite = request.data["favorite"]
 
         comic = Comic.objects.get(pk=request.data["issue"])
         review.issue = comic
@@ -88,6 +89,19 @@ class ReviewView(ViewSet):
         review = Review.objects.get(pk=pk)
         review.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    @action(methods=['post'], detail=False)
+    def get_review_for_comic(self, request):
+        try:
+            collector = Collector.objects.get(user=request.auth.user)
+            review = Review.objects.get(issue=request.data["comic"], user=collector)
+            serializer = ReviewSerializer(review)
+            return Response(serializer.data)
+        except Review.DoesNotExist:
+            return Response({})
+        
+
+
 
 class ReviewSerializer(serializers.ModelSerializer):
     """JSON serializer for reviews"""

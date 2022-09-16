@@ -36,44 +36,49 @@ class ComicView(ViewSet):
         if comic_type is not None:
             comics = comics.filter(comic_type_id=comic_type)
 
+        collector = Collector.objects.get(user=request.auth.user)
+        for comic in comics:
+            
+            comic.inCollection = comic in collector.collection.all()
+
         serializer = ComicSerializer(comics, many=True)
         return Response(serializer.data)
 
     # i need a PUT method here so the user can add it to their wish list or collection
 
     @action(methods=['post'], detail=True)
-    def addComicToCollection(self, request, pk):
+    def add_comic_to_collection(self, request, pk):
         """Post request for a user to add a comic to their collection"""
 
         comic = Comic.objects.get(pk=pk)
-        collector = Collector.get(user=request.auth.user)
+        collector = Collector.objects.get(user=request.auth.user)
         collector.collection.add(comic)
         return Response({'message': 'Comic added to collection'}, status=status.HTTP_201_CREATED)
 
     @action(methods=['delete'], detail=True)
-    def removeComicFromCollection(self, request, pk):
+    def remove_comic_from_collecton(self, request, pk):
         """delete comic from the user collection"""
 
         comic = Comic.objects.get(pk=pk)
-        collector = Collector.get(user=request.auth.user)
+        collector = Collector.objects.get(user=request.auth.user)
         collector.collection.remove(comic)
         return Response({'message': 'Comic removed from collection'}, status=status.HTTP_204_NO_CONTENT)
 
     @action(methods=['post'], detail=True)
-    def addComicToWishlist(self, request, pk):
+    def add_comic_to_wishlist(self, request, pk):
         """Post request for a user to add a comic to their wishlist"""
 
         comic = Comic.objects.get(pk=pk)
-        collector = Collector.get(user=request.auth.user)
+        collector = Collector.objects.get(user=request.auth.user)
         collector.wishlist.add(comic)
         return Response({'message': 'Comic added to wish list'}, status=status.HTTP_201_CREATED)
 
     @action(methods=['delete'], detail=True)
-    def removeComicFromWishlist(self, request, pk):
+    def remove_comic_from_wishlist(self, request, pk):
         """delete comic from the user wishlist"""
 
         comic = Comic.objects.get(pk=pk)
-        collector = Collector.get(user=request.auth.user)
+        collector = Collector.objects.get(user=request.auth.user)
         collector.wishlist.remove(comic)
         return Response({'message': 'Comic removed from wish list'}, status=status.HTTP_204_NO_CONTENT)
 
@@ -84,5 +89,5 @@ class ComicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comic
         fields = ('id', 'title', 'publisher', 'comic_type', 'series', 'characters', 'issue_number',
-                  'sale_date', 'synopsis', 'cover_image', 'credits', 'teams')
+                  'sale_date', 'synopsis', 'cover_image', 'credits', 'teams', 'inCollection')
         depth = 1
