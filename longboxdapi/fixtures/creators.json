@@ -43,5 +43,86 @@
             "bio": "Artist. Eisner Award winning comic-book artist, painter & illustrator.",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk-wmABfNsqx67CuRdm8lZKM9Typil1dOfqw&usqp=CAU"
         }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 6,
+        "fields": {
+            "name": "Mitch Gerads",
+            "bio": "Eisner Award-winning artist of MISTER MIRACLE, BATMAN, + now STRANGE ADVENTURES from @dccomics! Co-Creator of THE SHERIFF OF BABYLON + THE ACTIVITY.",
+            "image": "https://www.essentialsequential.com/assets/images/Screenshot_2020-03-11%20Artist%20Alley%20Mitch%20Gerads.png"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 7,
+        "fields": {
+            "name": "Jeph Loeb",
+            "bio": "is an American film and television writer, producer and comic book writer. Loeb was a producer/writer on the TV series Smallville and Lost, writer for the films Commando and Teen Wolf, and a writer and co-executive producer on the NBC TV show Heroes from its premiere in 2006 to November 2008.[4] In 2010, Loeb became Executive Vice President of Marvel Television.",
+            "image": "https://m.media-amazon.com/images/M/MV5BZjMyZDNiYTktOGM0ZC00Yzc1LTkyOGYtZjFmMDcwMzgwZDdlXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 8,
+        "fields": {
+            "name": "Tim Sale",
+            "bio": "Timothy Roger Sale was an American Eisner Award-winning comics artist, best known for his work on the DC Comics characters Batman and Superman and for influencing depictions of the Caped Crusader in numerous films.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/10.15.11TimSaleByLuigiNovi.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 9,
+        "fields": {
+            "name": "Kate Leth",
+            "bio": "Kate Leth is a bestselling cartoonist, writer, designer and illustrator.",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYNl9P8wFJpSdnp6KonY7W2niYk1p76KiCnad9NqUr71X6o5TusGAm_j5-OpHvNST3elU&usqp=CAU"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 10,
+        "fields": {
+            "name": "Brittney L Williams",
+            "bio": "Comics and Storyboard Artist.",
+            "image": "https://inkwellmanagement.com/images/authors/Brittney_Williams.jpeg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 11,
+        "fields": {
+            "name": "Matt Fraction",
+            "bio": " Eisner Award-winning American comic book writer, known for his work as the writer of The Invincible Iron Man, The Immortal Iron Fist, Uncanny X-Men, and Hawkeye for Marvel Comics; Casanova and Sex Criminals for Image Comics; and Superman's Pal Jimmy Olsen for DC Comics.",
+            "image": "https://comicvine.gamespot.com/a/uploads/scale_small/10/100647/5408424-untitled-12.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 12,
+        "fields": {
+            "name": "David Aja",
+            "bio": "Spanish comic book artist, best known for his work on The Immortal Iron Fist and Hawkeye.",
+            "image": "https://comicvine.gamespot.com/a/uploads/scale_medium/3/31666/2748986-aja_1.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 13,
+        "fields": {
+            "name": "Scott Snyder",
+            "bio": "American writer. He is known for his 2006 short story collection Voodoo Heart, and his comic book writing, including American Vampire, Detective Comics, Batman, Wytches, Swamp Thing, and Justice League.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/9.17.16ScottSnyderByLuigiNovi2.jpg"
+        }
+    },
+    {
+        "model": "longboxdapi.creator",
+        "pk": 14,
+        "fields": {
+            "name": "Greg Capullo",
+            "bio": " American comic book artist and penciller, best known for his work on Quasar (1991–1992), X-Force (1992–1993), Angela (1994), Spawn (1993–2000, 2003–2004) and Batman (2011–2016).",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/10.15.11GregCapulloByLuigiNovi1.jpg/220px-10.15.11GregCapulloByLuigiNovi1.jpg"
+        }
     }
 ]

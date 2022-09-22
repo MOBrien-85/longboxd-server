@@ -7,8 +7,125 @@
             "alias": "Peter Parker",
             "desc": "Bitten by a radioactive spider, Peter Parker's arachnid abilities give him amazing powers he uses to help others, while is personal life continues to offer plenty of obstacles.",
             "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
-            "creators": [1, 2],
-            "teams": [1, 2, 3]
+            "creators": [
+                1,
+                2
+            ],
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 2,
+        "fields": {
+            "name": "Vision",
+            "alias": "Vision",
+            "desc": "The Vision is an android (sometimes called a 'synthezoid') built by the villainous robot Ultron created by Hank Pym. Originally intended to act as Ultron's 'son' and destroy the Avengers, Vision instead turned on his creator and joined the Avengers to fight for the forces of good. Since then, he has been depicted as a frequent member of the team, and, for a time, was married to his teammate, the Scarlet Witch.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Avengers_Vol_4_24.1.jpg/250px-Avengers_Vol_4_24.1.jpg",
+            "creators": [],
+            "teams": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 3,
+        "fields": {
+            "name": "Mister Miracle",
+            "alias": "Scott Free",
+            "desc": "A fictional superhero appearing in American comic books published by DC Comics. He first appeared in Mister Miracle #1 (April 1971) and was created by Jack Kirby.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Mister_Miracle.png/220px-Mister_Miracle.png",
+            "creators": [
+                3
+            ],
+            "teams": [
+                
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 4,
+        "fields": {
+            "name": "Superman",
+            "alias": "Clark Kent",
+            "desc": "Superman was born on the fictional planet Krypton and was named Kal-El. As a baby, his parents sent him to Earth in a small spaceship moments before Krypton was destroyed in a natural cataclysm. His ship landed in the American countryside, near the fictional town of Smallville. He was found and adopted by farmers Jonathan and Martha Kent, who named him Clark Kent. Clark developed various superhuman abilities, such as incredible strength and impervious skin. His adoptive parents advised him to use his abilities for the benefit of humanity, and he decided to fight crime. To protect his personal life, he changes into a colorful costume and uses the alias 'Superman' when fighting crime. Clark resides in the fictional American city of Metropolis, where he works as a journalist for the Daily Planet. Superman's supporting characters include his love interest and fellow journalist Lois Lane, Daily Planet photographer Jimmy Olsen and editor-in-chief Perry White, and his enemies include Brainiac, General Zod, Darkseid, and his archenemy Lex Luthor.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Supermanflying.png/220px-Supermanflying.png",
+            "creators": [
+                
+            ],
+            "teams": [
+                
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 5,
+        "fields": {
+            "name": "Hellcat",
+            "alias": "Patsy Walker",
+            "desc": "a fictional superhero appearing in American comic books published by Marvel Comics. She premiered as the star of a teen romantic-comedy series, and was later integrated into Marvel superhero franchises such as the Avengers and the Defenders as Hellcat.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/0/06/Patsy_Walker_%28Hellcat%29.jpg",
+            "creators": [
+              
+            ],
+            "teams": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 6,
+        "fields": {
+            "name": "Hawkeye",
+            "alias": "Clint Barton",
+            "desc": "a fictional character appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Don Heck, the character first appeared as a supervillain in Tales of Suspense #57 (September 1964) and later joined the Avengers as a superhero in The Avengers #16 (May 1965). He has since been a prominent member of several Avengers teams, founding the West Coast Avengers, briefly marrying and subsequently divorcing Bobbi Morse / Mockingbird, adopting the Ronin alias after his death and resurrection before mentoring Kate Bishop as his successor as Hawkeye.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Hawkeye_%28Clinton_Barton%29.png/220px-Hawkeye_%28Clinton_Barton%29.png",
+            "creators": [
+                1
+            ],
+            "teams": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 7,
+        "fields": {
+            "name": "Hawkeye (Kate Bishop)",
+            "alias": "Kate Bishop",
+            "desc": "Created by writer Allan Heinberg and artist Jim Cheung, Bishop first appeared in Young Avengers #1 (April 2005). She is the third character and first female to take the Hawkeye name, after Clint Barton of the Avengers and Wyatt McDonald of the Squadron Supreme. Her costume appearance is patterned on the first Hawkeye and Mockingbird.",
+            "image": "https://www.looper.com/img/gallery/the-untold-truth-of-marvels-kate-bishop/l-intro-1607092068.jpg",
+            "creators": [
+                
+            ],
+            "teams": [
+                
+            ]
+        }
+    },
+    {
+        "model": "longboxdapi.character",
+        "pk": 8,
+        "fields": {
+            "name": "Batman",
+            "alias": "Bruce Wayne",
+            "desc": "The character was created by artist Bob Kane and writer Bill Finger, and debuted in the 27th issue of the comic book Detective Comics on March 30, 1939. In the DC Universe continuity, Batman is the alias of Bruce Wayne, a wealthy American playboy, philanthropist, and industrialist who resides in Gotham City. Batman's origin story features him swearing vengeance against criminals after witnessing the murder of his parents Thomas and Martha, who were robbed and shot to death infront of an eight-year-old Bruce, a vendetta tempered with the ideal of justice. He trains himself physically and intellectually, crafts a bat-inspired persona, and monitors the Gotham streets at night.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Batman_Infobox.jpg/220px-Batman_Infobox.jpg",
+            "creators": [
+                
+            ],
+            "teams": [
+                
+            ]
         }
     }
 ]

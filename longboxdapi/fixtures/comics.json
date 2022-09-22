@@ -32,5 +32,90 @@
             "credits": [4, 5],
             "teams": []
         }
+    },
+    {
+        "model": "longboxdapi.comic",
+        "pk": 3,
+        "fields": {
+            "title": "Mister Miracle",
+            "publisher_id": 2,
+            "comic_type": 2,
+            "series": "Mister Miracle",
+            "characters": [],
+            "issue_number": 1,
+            "sale_date": "2018-04-24",
+            "synopsis": "From Hugo Award-winning writer Tom King and artist Mitch Gerads, the team behind THE SHERIFF OF BABYLON, comes an ambitious new take on one of Jack Kirby's most beloved New Gods in MISTER MIRACLE! ",
+            "cover_image": "https://books.google.com/books/publisher/content?id=2CSHDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1CweK78aqW0DQU4nMsV7_jG1_Y7Q&w=1280",
+            "credits": [4, 6],
+            "teams": []
+        }
+    },
+    {
+        "model": "longboxdapi.comic",
+        "pk": 4,
+        "fields": {
+            "title": "Superman: For All Seasons",
+            "publisher_id": 2,
+            "comic_type": 2,
+            "series": "Superman",
+            "characters": [],
+            "issue_number": 1,
+            "sale_date": "2002-01-01",
+            "synopsis": "In this coming-of-age tale witness the experiences and adventures that transform a simple country boy into the world's greatest hero. Told through the course of four seasons in the Man of Steel's adolescent life, it illustrates that it is the person, not the powers, that makes Superman a hero. The catalyst for the 'Smallville' television program, SUPERMAN FOR ALL SEASONS is emotional and insightful, humanizing the alien from another planet so that he is not only realistic but also relatable. It also features in-depth characterizations of Lana Lang, Lex Luthor, Lois Lane and the Kents. This volume collects SUPERMAN: FOR ALL SEASONS #1-4.",
+            "cover_image": "https://books.google.com/books/publisher/content?id=hIcUAgAAQBAJ&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3M2jmvmNixaVFpacHbQYQwbUlDtw&w=1280",
+            "credits": [7, 8],
+            "teams": []
+        }
+    },
+    {
+        "model": "longboxdapi.comic",
+        "pk": 5,
+        "fields": {
+            "title": "Patsy Walker a.K.a. Hellcat!",
+            "publisher_id": 1,
+            "comic_type": 2,
+            "series": "Patsy Walker a.K.a. Hellcat!",
+            "characters": [],
+            "issue_number": 1,
+            "sale_date": "2015-01-01",
+            "synopsis": "PATSY WALKER has managed to escape her past, her enemies and Hell itself (literally), but nothing compares to job hunting in New York City! Between trying to make rent and dodging (literal) bullets, Patsy barely has time to deal with her mother's exploitative romance comics about her childhood resurfacing, much less how they start to interfere with her work and dating life. As she goes from living a double life to a triple, what the Hell is Patsy Walker supposed to do? Raise your (literal) claws for PATSY WALKER, AKA HELLCAT!",
+            "cover_image": "https://i.annihil.us/u/prod/marvel/i/mg/9/f0/58bf419b759ac/clean.jpg",
+            "credits": [9, 10],
+            "teams": []
+        }
+    },
+    {
+        "model": "longboxdapi.comic",
+        "pk": 6,
+        "fields": {
+            "title": "Hawkeye: My Life as a Weapon",
+            "publisher_id": 1,
+            "comic_type": 2,
+            "series": "Hawkeye",
+            "characters": [],
+            "issue_number": 1,
+            "sale_date": "2018-01-01",
+            "synopsis": "Collects Hawkeye #1-5 & Young Avengers Presents #6.ÿ The breakout star of this summer's blockbuster Avengers film, Clint Barton - aka the self-made hero Hawkeye - fights for justice! With ex-Young Avenger Kate Bishop by his side, he's out to prove himself as one of Earth's Mightiest Heroes!",
+            "cover_image": "https://books.google.com/books/content?id=Slfa87-x0S8C&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0COpq7jRSdvIdpEAziy3Z_XJn5jA&w=1280",
+            "credits": [11, 12],
+            "teams": []
+        }
+    },
+    {
+        "model": "longboxdapi.comic",
+        "pk": 7,
+        "fields": {
+            "title": "Batman: The Court of Owls",
+            "publisher_id": 2,
+            "comic_type": 2,
+            "series": "Batman",
+            "characters": [],
+            "issue_number": 1,
+            "sale_date": "2018-01-01",
+            "synopsis": "After a series of brutal murders rocks Gotham City, Batman begins to realize that perhaps these crimes go far deeper than appearances suggest. As the Caped Crusader begins to unravel this deadly mystery, he discovers a conspiracy going back to his youth and beyond to the origins of the city he's sworn to protect. Could the Court of Owls, once thought to be nothing more than an urban legend, be behind the crime and corruption? Or is Bruce Wayne losing his grip on sanity and falling prey to the pressures of his war on crime?",
+            "cover_image": "https://books.google.com/books/publisher/content?id=ZfmrAAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0chzsoNJm8Tj2Xx5mfZ6CGRopRWQ&w=1280",
+            "credits": [13, 14],
+            "teams": []
+        }
     }
 ]
