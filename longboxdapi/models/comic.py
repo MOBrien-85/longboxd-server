@@ -30,3 +30,11 @@ class Comic(models.Model):
     @inCollection.setter
     def inCollection(self, value):
         self.__inCollection = value
+
+    @property
+    def inWishlist(self):
+        return self.__inWishlist
+
+    @inWishlist.setter
+    def inWishlist(self, value):
+        self.__inWishlist = value

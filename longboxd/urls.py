@@ -16,21 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework import routers
-from longboxdapi.models.publisher import Publisher
-from longboxdapi.models.team import Team
 from longboxdapi.views import register_user, login_user, ComicTypeView
 from longboxdapi.views import ComicView
 from longboxdapi.views import CollectorView
 from longboxdapi.views import CreatorView
-from longboxdapi.views.character import CharacterView
-from longboxdapi.views.publisher import PublisherView
+from longboxdapi.views import CharacterView
+from longboxdapi.views import PublisherView
 from longboxdapi.views.team import TeamView
 from longboxdapi.views.user_review import ReviewView
 
 
 
 router = routers.DefaultRouter(trailing_slash=False)
+
 router.register(r'comictypes', ComicTypeView, 'comictype')
 router.register(r'comics', ComicView, 'comic')
 router.register(r'collectors', CollectorView, 'collector')
@@ -46,3 +47,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

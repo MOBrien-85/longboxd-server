@@ -6,7 +6,6 @@ from rest_framework import serializers, status
 from longboxdapi.models import Collector
 from django.contrib.auth.models import User
 from rest_framework.decorators import action
-
 from longboxdapi.views.user_review import ReviewSerializer
 
 
@@ -15,13 +14,17 @@ class CollectorView(ViewSet):
 
     def retrieve(self, request, pk):
         """Handle GET requests for a single collector profile
-        
+
         Returns: 
             Response -- JSON serialized collector
         """
-        collector = Collector.objects.get(pk=pk)
-        serializer = CollectorSerializer(collector)
-        return Response(serializer.data)
+        try:
+            collector = Collector.objects.get(pk=pk)
+            serializer = CollectorSerializer(collector, context={'request': request})
+            return Response(serializer.data)
+            
+        except Collector.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def update(self, request, pk):
         """Handle PUT requests for a user
@@ -34,22 +37,26 @@ class CollectorView(ViewSet):
         #     return Response(None, status=status.HTTP_401_UNAUTHORIZED)
     @action(methods=['PUT'], detail=True)
     def user_active(self, request, pk):
-        user = User.objects.get(pk=pk) #django
+        user = User.objects.get(pk=pk)  # django
         user.is_active = not user.is_active
         user.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'is_active')
+        fields = ('id', 'username', 'first_name',
+                  'last_name', 'email', 'is_active')
 
 class CollectorSerializer(serializers.ModelSerializer):
     """JSON serializer for collectors
     """
     reviews = ReviewSerializer(many=True)
     user = UserSerializer()
-    class Meta: 
-        model = Collector
-        fields = ('id', 'user', 'bio', "reviews")
 
+    class Meta:
+        model = Collector
+        fields = ('id', 'user', 'bio', 'reviews', 'collection', 'wishlist')
+        depth = 2

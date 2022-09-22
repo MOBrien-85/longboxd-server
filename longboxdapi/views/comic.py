@@ -17,8 +17,11 @@ class ComicView(ViewSet):
         Returns:
             Response -- JSON serialized comic
         """
+        collector = Collector.objects.get(user=request.auth.user)
         try:
             comic = Comic.objects.get(pk=pk)
+            comic.inCollection = True if comic in collector.collection.all() else False
+            comic.inWishlist = True if comic in collector.wishlist.all() else False
             serializer = ComicSerializer(comic)
             return Response(serializer.data)
         except Comic.DoesNotExist as ex:
@@ -32,13 +35,13 @@ class ComicView(ViewSet):
         """
         comics = Comic.objects.all()
 
-        comic_type = request.query_params.get('type', None)
-        if comic_type is not None:
-            comics = comics.filter(comic_type_id=comic_type)
+        publisher = request.query_params.get('publisher', None)
+        if publisher is not None:
+            comics = comics.filter(publisher_id=publisher)
 
         collector = Collector.objects.get(user=request.auth.user)
         for comic in comics:
-            
+
             comic.inCollection = comic in collector.collection.all()
 
         serializer = ComicSerializer(comics, many=True)
@@ -56,7 +59,7 @@ class ComicView(ViewSet):
         return Response({'message': 'Comic added to collection'}, status=status.HTTP_201_CREATED)
 
     @action(methods=['delete'], detail=True)
-    def remove_comic_from_collecton(self, request, pk):
+    def remove_comic_from_collection(self, request, pk):
         """delete comic from the user collection"""
 
         comic = Comic.objects.get(pk=pk)
@@ -89,5 +92,5 @@ class ComicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comic
         fields = ('id', 'title', 'publisher', 'comic_type', 'series', 'characters', 'issue_number',
-                  'sale_date', 'synopsis', 'cover_image', 'credits', 'teams', 'inCollection')
+                  'sale_date', 'synopsis', 'cover_image', 'credits', 'teams', 'inCollection', 'inWishlist')
         depth = 1
